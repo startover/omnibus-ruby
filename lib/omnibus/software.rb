@@ -625,7 +625,7 @@ module Omnibus
     #   true if the software was fetched, false if it was cached
     #
     def fetch
-      File.write("C:\perusse.txt", "Hello #{name_or_url}");
+      File.write("C:\perusse.txt", "Hello #{name}");
       if fetcher.fetch_required?
         fetcher.fetch
         true

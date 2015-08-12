@@ -112,6 +112,7 @@ module Omnibus
     # @return [void]
     #
     def update_with_file_contents(digest, filename)
+      File.write('C:\\tire_trace.txt', "Some glorious content #{filename} #{digest}")
       File.open(filename) do |io|
         while (chunk = io.read(1024 * 8))
           digest.update(chunk)

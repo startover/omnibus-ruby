@@ -33,6 +33,7 @@ module Omnibus
     # @return [true, false]
     #
     def fetch_required?
+      File.write('C:\hardcore_debug.txt', downloaded_file)
       !(File.exist?(downloaded_file) && digest(downloaded_file, :md5) == checksum)
     end
 

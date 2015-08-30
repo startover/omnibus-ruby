@@ -131,7 +131,7 @@ module Omnibus
     # specs and is actually used by YUM and APT but doesn't reall have an
     # equivalent on OSX/Windows (where version numbers don't really matter
     # anyway...)
-    def dd_agent_format
+    def ci_agent_format
       agent_version = semver
       if ENV['AGENT_VERSION'] and ENV['AGENT_VERSION'].length > 1 and agent_version.include? "git"
         agent_version = ENV['AGENT_VERSION'] + "." + agent_version.split("+")[1]
